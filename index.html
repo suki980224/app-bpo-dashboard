@@ -1212,7 +1212,7 @@ table.sa .c2{font-size:10.5px;color:#ea580c;font-weight:600;line-height:1.3;}
 <div class="sn-scroll"><div id="snAgg"></div></div>
 </div>
 <p class="sn-note">
-<b>吃饭标注</b>：姓名后橙色「饭」＝该小时在吃饭——9-18 班 12:00-13:00、12-21 班 15:30-16:30（标在 16 点格）、15-24 班 17:00-18:00；表头橙色「饭」即吃饭小时。两段班/短班不安排吃饭，不标。<br>口径：R=休息不计；含 T1/Q1 的特殊班次（如 P2A+Q1A）不计；班次按整点小时覆盖（9:00-13:00 覆盖 9/10/11/12 点）。姓名已按工号核对（修正 OCR 偏差）。
+<b>吃饭标注</b>：姓名后橙色「饭」＝该小时在吃饭——9-18 班 12:00-13:00、12-21 班 15:30-16:30（标在 16 点格）、15-24 班 17:00-18:00；表头橙色底即吃饭小时。两段班/短班不安排吃饭，不标。<br>口径：R=休息不计；含 T1/Q1 的特殊班次（如 P2A+Q1A）不计；班次按整点小时覆盖（9:00-13:00 覆盖 9/10/11/12 点）。姓名已按工号核对（修正 OCR 偏差）。
 </p>
 </div>
 <script>
@@ -1223,7 +1223,7 @@ function snCellBg(n){if(n===0)return['#f7f8fa','#cbd5e1',false];var l=Math.max(9
 function renderSnDet(w){
   var m=snDet[w],ds=snDates[w],i,h,d;
   var head='<tr><th class="lbl">日期\\小时</th>';
-  for(i=0;i<snHours.length;i++){var hh=snHours[i];head+='<th'+(MEAL_HOURS.indexOf(hh)>=0?' class="mealhd"':'')+'>'+hh+(MEAL_HOURS.indexOf(hh)>=0?'<span class="mealhdt">饭</span>':'')+'</th>';}
+  for(i=0;i<snHours.length;i++){var hh=snHours[i];head+='<th'+(MEAL_HOURS.indexOf(hh)>=0?' class="mealhd"':'')+'>'+hh+'</th>';}
   head+='</tr>';
   var body='',total=0;
   for(d=0;d<7;d++){
